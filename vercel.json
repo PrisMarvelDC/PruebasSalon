@@ -1,0 +1,72 @@
+{
+    "version": 2,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.6.1" }
+    },
+    "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/"
+        },
+        {
+            "src": "/resources/(.*)",
+            "dest": "/public/resources/"
+        },
+        {
+            "src": "/favicon/(.*)",
+            "dest": "/public/favicon/"
+        },
+        {
+            "src": "/images/(.*)",
+            "dest": "/public/images/"
+        },
+        {
+            "src": "/assets/(.*)",
+            "dest": "/public/build/"
+        },
+        {
+            "src": "/assets/(.*)",
+            "dest": "/public/assets/"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_NAME": "Utopia-Salon",
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "VITE_HTTPS": "true",
+
+        "MAIL_MAILER": "smtp",
+        "MAIL_HOST": "smtp.resend.com",
+        "MAIL_PORT": "587",
+        "MAIL_USERNAME": "resend",
+        "MAIL_PASSWORD": "re_LThLaiaQ_AzdZA6WZpHq227c3ezrHJUV8",
+        "MAIL_ENCRYPTION": "tls",
+        "MAIL_FROM_ADDRESS": "admin@utopia-salon.com",
+        "MAIL_FROM_NAME": "Utopía Salón",
+
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+
+        "SSR_TEMP_PATH": "/tmp/ssr",
+        "NODE_PATH": "node",
+
+        "APP_KEY": "base64:88rQ9BIVqVLQ1z4ZAOnghvuwWZ+hsDRgI+a0A7SiIRM=",
+
+        "DB_CONNECTION": "pgsql",
+        "DATABASE_URL": "postgres://postgres.gitiflvxbhzatwpqfjji:Ifn0Y7aQ14jVQ75r@aws-0-us-west-1.pooler.supabase.com:5432/postgres",
+
+        "MYSQL_ATTR_SSL_CA": "/etc/ssl/certs/ca-bundle.crt"
+    }
+}
